@@ -282,6 +282,7 @@ html{
 
 .content {
  
+
   font-size: 30px;
 }
 .left_block_content{
@@ -413,6 +414,13 @@ hr{
 	margin-top: 20px;
 	width: 30%;
 	float: right;
+}
+.list {
+	display: none;
+
+}
+.active {
+	display: block;
 }
 
 nav{

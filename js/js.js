@@ -26,18 +26,33 @@ function showSlides(n) {
 }
 
 (function Accordion() {
-    const [...acocrdion_containers] = document.querySelectorAll('[data-accordion]');
+    let titles = [...document.querySelectorAll('.accordion-title')];
+    let lists = [...document.querySelectorAll('.list')];
+    titles.forEach((elem,index)=>{
+        elem.addEventListener('click',()=>{
+         removeActive();
+         lists[index].classList.add('active');
+        });
+    })
 
-    acocrdion_containers.forEach((accordion) => {
-        const [...accordion_titles] = accordion.querySelectorAll('.accordion-title');
-
-        accordion_titles.forEach((title) => {
-            title.addEventListener('click', () => open(title, accordion_titles))
-        })
-    });
-
-    function open(title, siblings) {
-        siblings.forEach(item => item.classList.remove('active'));
-        title.classList.add('active');
+    function removeActive(){
+       lists.forEach(elem => elem.classList.remove('active'));
     }
+
+     // console.log(titles);
+
+    // const [...acocrdion_containers] = document.querySelectorAll('[data-accordion]');
+
+    // acocrdion_containers.forEach((accordion) => {
+    //     const [...accordion_titles] = accordion.querySelectorAll('.accordion-title');
+
+    //     accordion_titles.forEach((title) => {
+    //         title.addEventListener('click', () => open(title, accordion_titles))
+    //     })
+    // });
+
+    // function open(title, siblings) {
+    //     siblings.forEach(item => item.classList.remove('active'));
+    //     title.classList.add('active');
+    // }
 })();
