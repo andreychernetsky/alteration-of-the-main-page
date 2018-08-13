@@ -24,3 +24,20 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 }
+
+(function Accordion() {
+    const [...acocrdion_containers] = document.querySelectorAll('[data-accordion]');
+
+    acocrdion_containers.forEach((accordion) => {
+        const [...accordion_titles] = accordion.querySelectorAll('.accordion-title');
+
+        accordion_titles.forEach((title) => {
+            title.addEventListener('click', () => open(title, accordion_titles))
+        })
+    });
+
+    function open(title, siblings) {
+        siblings.forEach(item => item.classList.remove('active'));
+        title.classList.add('active');
+    }
+})();
