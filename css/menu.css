@@ -1,0 +1,526 @@
+body{
+	background:#F5F5F5;
+	font-family: 'PT Serif', Arial, serif;
+}
+
+html{
+	font-size: 16px;
+}
+.main_header  {
+	
+	width: 990px;
+	margin: 0 auto;
+}
+.main_header img {
+	height: 70px;
+	padding: 5px;
+}
+.logo {
+	display: flex;
+	justify-content: center;
+}
+
+.link_logo  {
+	
+	color: #5f5d67;
+	text-decoration: none;
+	/*text-align: center;*/
+	transition: 1.5s;
+}
+
+.link_logo:hover {
+	background: #bbbbbb;
+	border-radius: 5px;
+}
+
+.wrapper{
+	width: 990px;
+	margin: 20px auto;
+}
+
+
+
+
+/*start menu*/
+.navbar {
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+    overflow: hidden;
+    background-color: #5F2D0F;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    /*float: left;*/
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+   /* float: left;*/
+    overflow: hidden;
+}
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.dropdown .dropbtn {
+    font-size: 1rem;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color:#146530;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content .header {
+    background:#146530;
+    padding: 16px;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: #ccc;
+    height: 250px;
+}
+
+.column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.column a:hover {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        height: auto;
+    }
+}
+/*the end menu*/
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+/*the end slider*/
+
+
+.content{
+	width: 100%;
+	/*display: flex;*/
+	/*flex-wrap: wrap;*/
+	/*align-items: center;*/
+}
+/*start icon-bar*/
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.vk {
+  background: #55ACEE;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+/*the end icon-bar*/
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+.left_block_content{
+
+}
+.artblock {
+
+}
+.main_title {
+font-size: 27px;
+}
+.link_title {
+
+	color: #5f5d67;
+	text-decoration: none;
+	transition: 1.5s;
+}
+.link_title:hover {
+	color: #bbbbbb;
+	
+}
+
+
+.center-block-main{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80px;
+}
+
+.nav ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav ul li {
+	margin: 10px 40px;
+	list-style: none;
+}
+
+.nav ul li a{
+	font-weight: 700;
+	text-decoration: none;
+	font-size:1.5rem;
+	color: #fff;
+	padding:  20px;
+	display: block;
+}
+
+.nav ul li a:hover{
+	color: #58c93a;
+	border-bottom: 3px solid #58c93a; 
+}
+
+/*left block*/
+.section_question {
+	margin-top: 25px;
+	background: white;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.left_block_content{
+	width: 65%;
+	/*display: flex;*/
+	/*flex-direction: row;*/
+	/*justify-content: space-between;*/
+	margin: 5px 10px 10px;
+	float: left;
+}
+.back_photo{
+	width: 100%;
+	height: 400px;
+	background: black;
+}
+.foto{
+	/*display: flex;
+	flex-direction: row;
+	justify-content: center;*/
+	float: left;
+	margin:10px 8px 0 0;
+}
+
+.question_block{
+	margin: 5px;
+}
+
+.l_text{
+	font-size: 1.1rem;
+	text-align: justify;
+	line-height: 23px;
+	margin-bottom: 15px;
+}
+
+.l_text_margin{
+	margin-left: 18px;
+}
+
+.l_question, .l_answer{
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+.r_foto{
+	float: right;
+	margin: 30px 5px 0 10px;
+}
+
+hr{
+	background: #58c93a;
+	height: 1px;
+	width: 45%;
+	opacity: 0.3;
+}
+
+/*right block*/
+
+.right_block_content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	width: 30%;
+	float: right;
+}
+
+nav{
+	margin-bottom: 20px;
+	background: #fff;
+	padding: 12px 10px;
+	font-size: 0.7rem;
+}
+
+.rh4 {
+	margin: 0;
+	padding: 8px 0 8px 15px;
+	background:#5F2D0F;
+	font-size: 1.5rem;
+
+	line-height: 23px;
+	color:#fff;
+}
+nav ul {
+	padding: 0;
+	margin: 10px 0 0;
+}
+.link_nav {
+	font-size: 1rem;
+	list-style: none;
+	height: 31px;
+	border-bottom: 1px solid #e8e6de;
+	margin: 10px 16px;
+}
+nav li a{
+	text-decoration: none;
+	color:#14652F;
+: 10px 10px 10px;
+}
+nav li a:hover  {
+	text-decoration: none;
+	color:#B8799E;
+	
+    text-align: center;
+	padding: 2px;
+	min-width: 30%;
+	
+}
+
+nav p{
+	line-height:25px;
+	padding:0 10px 0;
+	color:#444;
+}
+
+/*footer*/
+footer img {
+	height: 50px;
+	padding: 5px;
+}
+
+footer a {
+	color: #5f5d67;
+	text-decoration: none;
+	text-align: center;
+	transition: 1.5s;
+}
+
+footer a:hover {
+	background: #bbbbbb;
+	border-radius: 5px;
+}
+
+@media only screen and (max-width: 990px) {
+	html {
+		font-size: 10px;
+	}
+	.wrapper {
+		width: 80%;
+	}
+	.burger-button {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 750px) and (min-width: 481px) {
+	html {
+		font-size: 10px;
+	}
+	.wrapper {
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 480px) and (min-width: 0) {
+	html {
+		font-size: 10px;
+	}
+	.wrapper {
+		width: 97%;
+	}
+	.main-content {
+		flex-direction: column;
+	}
+	article,
+	aside {
+		width: 100%;
+	}
+	/************** Slider to img *******************/
+	.main-content-img img:first-child {
+		display: block;
+	}
+	.slider-header {
+		display: none;
+	}
+}
