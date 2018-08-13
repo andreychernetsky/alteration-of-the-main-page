@@ -31,12 +31,12 @@ function showSlides(n) {
     titles.forEach((elem,index)=>{
         elem.addEventListener('click',()=>{
          removeActive();
-         lists[index].classList.add('active');
+         lists[index].classList.add('active1')
         });
     })
 
     function removeActive(){
-       lists.forEach(elem => elem.classList.remove('active'));
+       lists.forEach(elem => elem.classList.remove('active1'));
     }
 
      // console.log(titles);
