@@ -262,6 +262,7 @@ html{
 
 .icon-bar a:hover {
     background-color: #000;
+    background: #777;
 }
 
 .facebook {
@@ -269,9 +270,10 @@ html{
   color: white;
 }
 
-.vk {
+.vk{
   background: #55ACEE;
   color: white;
+
 }
 
 .youtube {
